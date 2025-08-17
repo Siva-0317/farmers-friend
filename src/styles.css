@@ -1,0 +1,357 @@
+/* Import custom fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@500;600&display=swap');
+
+/* =========================
+   Reset & Full Screen
+   ========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom right, #f7f3eb, #efe6d9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* =========================
+   Shared Container Styling
+   ========================= */
+.section-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 3rem 2rem;
+  background-color: #fffdf7;
+  border-radius: 20px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
+  min-width: 340px;
+  max-width: 540px;
+  width: 100%;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.section-container:hover {
+  transform: translateY(-4px);
+}
+
+/* =========================
+   Form Styles
+   ========================= */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.form-container h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  text-align: center;
+  color: #6b4226;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.form-container label {
+  font-weight: 600;
+  color: #3d3d3d;
+  margin-bottom: 0.5rem;
+  display: block; /* ensures label sits above input */
+}
+
+.form-container input,
+.form-container select,
+.form-container textarea {
+  padding: 0.8rem 1rem;
+  border: 1px solid #cbbf9d;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  width: 100%; /* make all fields full width */
+  display: block;
+}
+
+.form-container input:focus,
+.form-container select:focus,
+.form-container textarea:focus {
+  border-color: #8a9a5b;
+  box-shadow: 0 0 6px rgba(138,154,91,0.3);
+  outline: none;
+}
+
+.form-container button {
+  background-color: #a63a3a;
+  color: white;
+  padding: 0.95rem;
+  border-radius: 10px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  margin-top: 1rem;
+  width: 100%; /* button spans full width */
+}
+
+.form-container button:hover {
+  background-color: #8b2f2f;
+  transform: scale(1.03);
+}
+
+.success-message {
+  margin-top: 15px;
+  padding: 14px;
+  background-color: #d4edda;
+  color: #155724;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 600;
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.05);
+}
+
+/* =========================
+   Login / Land Registration Containers
+   ========================= */
+.login-container,
+.land-registration-container {
+  background-color: #f9f6f1;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  font-family: 'Playfair Display', serif;
+}
+
+/* =========================
+   Home Page
+   ========================= */
+.home-container {
+  text-align: center;
+  padding: 100px 30px;
+  background: linear-gradient(to bottom, #f5f2e7, #e8dcc7);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.welcome-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: #3b4d2b;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.welcome-text {
+  font-size: 1.25rem;
+  max-width: 640px;
+  color: #2e2d2d;
+  margin-bottom: 50px;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.button-group {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 14px 28px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  transition: 0.3s;
+}
+
+.btn.primary {
+  background: #6b8e23;
+  color: white;
+}
+
+.btn.primary:hover {
+  background: #556b2f;
+}
+
+.btn.secondary {
+  background: #b22222;
+  color: white;
+}
+
+.btn.secondary:hover {
+  background: #8b0000;
+}
+
+/* =========================
+   Registered Lands List
+   ========================= */
+.registered-lands {
+  margin-top: 24px;
+  padding: 16px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  width: 100%;
+  font-weight: 500;
+}
+
+.registered-lands ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.registered-lands li {
+  margin: 8px 0;
+  padding: 10px 12px;
+  background-color: #eef2e6;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.register-text {
+  font-size: 0.95rem;
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: 500;
+}
+
+.register-text a {
+  color: #6a1b9a;
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: 4px;
+}
+
+.register-text a:hover {
+  text-decoration: underline;
+}
+/*.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-container input {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.registration-page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 1rem;
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #f7f3eb, #efe6d9);
+}
+
+.registration-form-wrapper {
+  background-color: #fffdf7;
+  padding: 2.5rem 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+}
+
+.registration-form-wrapper h2 {
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #6b4226;
+  margin-bottom: 2rem;
+}
+
+.registration-form-wrapper .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.registration-form-wrapper label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #3b3b3b;
+}
+
+.registration-form-wrapper input {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 10px;
+  border: 1px solid #cbbf9d;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.registration-form-wrapper input:focus {
+  outline: none;
+  border-color: #8a9a5b;
+  box-shadow: 0 0 5px rgba(138, 154, 91, 0.3);
+}
+
+.registration-form-wrapper button {
+  width: 100%;
+  padding: 1rem;
+  background-color: #a63a3a;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.registration-form-wrapper button:hover {
+  background-color: #8b2f2f;
+}*/
+.registration-page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  background: linear-gradient(to bottom right, #f7f3eb, #efe6d9);
+}
+
+.section-container {
+  background-color: #fffdf7;
+  padding: 3rem 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
+  max-width: 540px;
+  width: 100%;
+  text-align: left;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+
